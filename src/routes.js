@@ -37,8 +37,8 @@ Coded by www.creative-tim.com
 
 // Material Dashboard 2 React layouts
 import Dashboard from "layouts/dashboard";
-import Tables from "layouts/tables";
-import Billing from "layouts/billing";
+import Users from "layouts/users";
+import NewStation from "layouts/New Station";
 import RTL from "layouts/rtl";
 import Notifications from "layouts/notifications";
 import Profile from "layouts/profile";
@@ -59,19 +59,19 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Tables",
-    key: "tables",
-    icon: <Icon fontSize="small">table_view</Icon>,
-    route: "/tables",
-    component: <Tables />,
+    name: "Users",
+    key: "users",
+    icon: <Icon fontSize="small">peoples</Icon>,
+    route: "/users",
+    component: <Users />,
   },
   {
     type: "collapse",
-    name: "Billing",
-    key: "billing",
-    icon: <Icon fontSize="small">receipt_long</Icon>,
-    route: "/billing",
-    component: <Billing />,
+    name: "New Station",
+    key: "newStation",
+    icon: <Icon fontSize="small">map</Icon>,
+    route: "/newStation",
+    component: <NewStation />,
   },
   {
     type: "collapse",
@@ -105,14 +105,14 @@ const routes = [
     route: "/authentication/sign-in",
     component: <SignIn />,
   },
-  {
-    type: "collapse",
-    name: "Sign Up",
-    key: "sign-up",
-    icon: <Icon fontSize="small">assignment</Icon>,
-    route: "/authentication/sign-up",
-    component: <SignUp />,
-  },
+  // {
+  //   type: "collapse",
+  //   name: "Sign Up",
+  //   key: "sign-up",
+  //   icon: <Icon fontSize="small">assignment</Icon>,
+  //   route: "/authentication/sign-up",
+  //   component: <SignUp />,
+  // },
 ];
 
 export default routes;

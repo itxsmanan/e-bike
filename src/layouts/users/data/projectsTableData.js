@@ -1,19 +1,5 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/function-component-definition */
-/**
-=========================================================
-* Material Dashboard 2 React - v2.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 
 // @mui material components
 import Icon from "@mui/material/Icon";
@@ -25,12 +11,9 @@ import MDAvatar from "components/MDAvatar";
 import MDProgress from "components/MDProgress";
 
 // Images
-import LogoAsana from "assets/images/small-logos/logo-asana.svg";
-import logoGithub from "assets/images/small-logos/github.svg";
-import logoAtlassian from "assets/images/small-logos/logo-atlassian.svg";
-import logoSlack from "assets/images/small-logos/logo-slack.svg";
-import logoSpotify from "assets/images/small-logos/logo-spotify.svg";
-import logoInvesion from "assets/images/small-logos/logo-invision.svg";
+import team2 from "assets/images/team-2.jpg";
+import team3 from "assets/images/team-3.jpg";
+import team4 from "assets/images/team-4.jpg";
 
 export default function data() {
   const Project = ({ image, name }) => (
@@ -55,19 +38,19 @@ export default function data() {
 
   return {
     columns: [
-      { Header: "project", accessor: "project", width: "30%", align: "left" },
-      { Header: "budget", accessor: "budget", align: "left" },
+      { Header: "name", accessor: "author", width: "45%", align: "left" },
+      { Header: "function", accessor: "function", align: "left" },
       { Header: "status", accessor: "status", align: "center" },
-      { Header: "completion", accessor: "completion", align: "center" },
+      { Header: "employed", accessor: "employed", align: "center" },
       { Header: "action", accessor: "action", align: "center" },
     ],
 
     rows: [
       {
-        project: <Project image={LogoAsana} name="Asana" />,
+        name: <Project image={team2} name="Team2" />,
         budget: (
           <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
-            $2,500
+            Josh
           </MDTypography>
         ),
         status: (
@@ -75,7 +58,7 @@ export default function data() {
             working
           </MDTypography>
         ),
-        completion: <Progress color="info" value={60} />,
+        // completion: <Progress color="info" value={60} />,
         action: (
           <MDTypography component="a" href="#" color="text">
             <Icon>more_vert</Icon>
@@ -83,7 +66,7 @@ export default function data() {
         ),
       },
       {
-        project: <Project image={logoGithub} name="Github" />,
+        project: <Project image={team3} name="Github" />,
         budget: (
           <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
             $5,000
@@ -102,7 +85,7 @@ export default function data() {
         ),
       },
       {
-        project: <Project image={logoAtlassian} name="Atlassian" />,
+        project: <Project image={team4} name="Atlassian" />,
         budget: (
           <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
             $3,400
@@ -121,7 +104,7 @@ export default function data() {
         ),
       },
       {
-        project: <Project image={logoSpotify} name="Spotify" />,
+        project: <Project image={team2} name="Spotify" />,
         budget: (
           <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
             $14,000
@@ -140,7 +123,7 @@ export default function data() {
         ),
       },
       {
-        project: <Project image={logoSlack} name="Slack" />,
+        project: <Project image={team3} name="Slack" />,
         budget: (
           <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
             $1,000
@@ -159,7 +142,7 @@ export default function data() {
         ),
       },
       {
-        project: <Project image={logoInvesion} name="Invesion" />,
+        project: <Project image={team4} name="Invesion" />,
         budget: (
           <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
             $2,300
